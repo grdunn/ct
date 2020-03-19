@@ -40,10 +40,10 @@ function run (set) {
         `<tr>
           <td>${result.positive}</td>
           <td>${result.negative}</td>
-          <td>${result.pending}</td>
+          <td class='desktop'>${result.pending}</td>
           <td>${result.death}</td>
           <td>${result.total}</td>
-          <td>${result.lastUpdateEt}</td>
+          <td class='desktop'>${result.lastUpdateEt}</td>
         </tr>`
       )
       let ctx = document.getElementById(state).getContext('2d');
@@ -73,7 +73,8 @@ function run (set) {
             scales: {
               yAxes: [{
                 ticks: {
-                  beginAtZero: true
+                  beginAtZero: true,
+                  suggestedMax: 10000000
                 }
               }]
             }

@@ -23,3 +23,10 @@
 .state {
   margin-bottom: 100px;
 }
+
+
+@media (max-width: 750px) {
+  .desktop {
+    display: none;
+  }
+}

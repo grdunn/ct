@@ -73,8 +73,7 @@ function run (set) {
             scales: {
               yAxes: [{
                 ticks: {
-                  beginAtZero: true,
-                  suggestedMax: 10000000
+                  beginAtZero: true
                 }
               }]
             }

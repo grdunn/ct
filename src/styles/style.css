@@ -1,9 +1,9 @@
 .margin-top {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .margin-bottom {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .center {
@@ -11,11 +11,15 @@
 }
 
 .image {
-  max-width: 400px;
+  max-width: 300px;
   width: 100%;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+.state {
+  margin-bottom: 100px;
 }

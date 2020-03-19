@@ -24,6 +24,11 @@
   margin-bottom: 100px;
 }
 
+.filters {
+  display: flex;
+  justify-content: center;
+}
+
 
 @media (max-width: 750px) {
   .desktop {

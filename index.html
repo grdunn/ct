@@ -9,14 +9,19 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="src/styles/style.css" media="screen" title="no title" charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
     <title>everything is OK</title>
   </head>
   <body>
     <div class="main margin-top container">
       <div class="center margin-bottom">
-        <img class="image" src="src/images/martin.gif"/><br>
-        <button data-refresh-trigger class="margin-top button">Refresh Data</button><br>
-        <small data-refresh>Updating...</small>
+        <img class="image" src="src/images/martin.gif"/>
+        <div class="margin-top filters">
+          <!-- <select id="filter" data-component="filter">
+            <option value="all">Everything</option>
+          </select> -->
+          <button data-refresh-trigger class="button button-primary">Refresh Data</button>
+        </div>
       </div>
       <div class="state margin-bottom">
         <div class="flex">
@@ -39,6 +44,7 @@
         </table>
         <div class="desktop">
           <canvas id="PA" height="50px"></canvas>
+          <canvas id="PA-LINE" height="100px"></canvas>
         </div>
       </div>
       <div class="state margin-bottom">
@@ -62,9 +68,13 @@
         </table>
         <div class="desktop">
           <canvas id="NY" height="50px"></canvas>
+          <canvas id="NY-LINE" height="100px"></canvas>
         </div>
       </div>
-      <div class="margin-bottom center copyright">Data/API via <a href="https://covidtracking.com/api/">The COVID Tracking Project</a>. Built by a <a href="https://github.com/grdunn">bored person</a>. Phila, PA</div>
+      <div class="center">
+        <small data-refresh>Updating...</small>
+      </div>
+      <div class="margin-top margin-bottom center copyright">Data/API via <a href="https://covidtracking.com/api/">The COVID Tracking Project</a>. Built by a <a href="https://github.com/grdunn">bored person</a>. Phila, PA</div>
     </div>
     <script src="src/js/site.js"></script>
   </body>

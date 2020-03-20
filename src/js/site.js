@@ -59,12 +59,14 @@ function run (set, query) {
   let state = $(set).data().state;
   let tableBody = $(set).find(body);
   let d = new Date();
-  let month = d.getMonth();
+  let month = d.getMonth() + 1;
   let date = d.getDate();
   let year = d.getFullYear();
   let hours = d.getHours();
   let min = d.getMinutes();
   let url = 'https://covidtracking.com/api/';
+
+  console.log(d);
 
   if (query === 'all') {
     url += `states/daily?state=${state}`;

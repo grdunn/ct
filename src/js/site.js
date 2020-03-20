@@ -257,6 +257,7 @@ function runLine (set) {
   let state = $(set).data().state;
   let tableBody = $(set).find(body);
   let url = `https://covidtracking.com/api/states/daily?state=${state}`
+  console.log(url);
   let lineChartLabels = [];
   let lineChartPositiveData = [];
   let lineChartNegativeData = [];
@@ -264,7 +265,10 @@ function runLine (set) {
   let ctxLine = document.getElementById(state + '-LINE').getContext('2d');
   $.ajax({
     url: url,
-    success: function(result) {
+    success: function(r) {
+      const result = _.orderBy(r, function (o) {
+        return new moment(o.date)
+      }, ['desc']);
       result.forEach(function (data, i) {
         lineChartLabels.push(moment(data.dateChecked).format('MM-DD'));
         lineChartPositiveData.push(data.positive)

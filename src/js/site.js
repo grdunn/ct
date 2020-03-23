@@ -82,7 +82,7 @@ function runGraph (set, query) {
           <td>${result.negative}</td>
           <td>${result.death}</td>
           <td>${result.total}</td>
-            <td>~${percentage}%</td>
+          <td class='desktop'>~${percentage}%</td>
           <td class='desktop'>${result.lastUpdateEt}</td>
         </tr>`
       );

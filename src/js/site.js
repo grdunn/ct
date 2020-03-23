@@ -75,13 +75,14 @@ function runGraph (set, query) {
   $.ajax({
     url: url,
     success: function(result) {
+      let percentage = Math.round(result.positive / result.total * 100);
       $(tableBody).empty().append(
         `<tr>
           <td>${result.positive}</td>
           <td>${result.negative}</td>
-          <td class='desktop'>${result.pending}</td>
           <td>${result.death}</td>
           <td>${result.total}</td>
+            <td>~${percentage}%</td>
           <td class='desktop'>${result.lastUpdateEt}</td>
         </tr>`
       );

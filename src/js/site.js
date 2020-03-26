@@ -201,9 +201,9 @@ function runLine (set, query) {
       let deathIncrease = result[0].deathIncrease
 
       $(`[data-${state}]`).empty().html(`
-         <span class="plusminus plusminus-pos">${positiveIncrease}</span>
-         <span class="plusminus plusminus-neg">${negativeIncrease}</span>
-         <span class="plusminus plusminus-d">${deathIncrease}</span>
+         <span class="plusminus plusminus-pos">Positive ${positiveIncrease}</span>
+         <span class="plusminus plusminus-neg">Negative ${negativeIncrease}</span>
+         <span class="plusminus plusminus-d">Deaths ${deathIncrease}</span>
       `);
 
 

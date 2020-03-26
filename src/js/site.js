@@ -196,6 +196,17 @@ function runLine (set, query) {
         ]
       };
 
+      let positiveIncrease = result[0].positiveIncrease
+      let negativeIncrease = result[0].negativeIncrease
+      let deathIncrease = result[0].deathIncrease
+
+      $(`[data-${state}]`).empty().html(`
+         <span class="plusminus plusminus-pos">${positiveIncrease}</span>
+         <span class="plusminus plusminus-neg">${negativeIncrease}</span>
+         <span class="plusminus plusminus-d">${deathIncrease}</span>
+      `);
+
+
       if (window[`myLineChart${state}`]) {
         window[`myLineChart${state}`].data = data;
         window[`myLineChart${state}`].update();

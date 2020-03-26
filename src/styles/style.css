@@ -35,3 +35,22 @@
     display: none;
   }
 }
+
+.plusminus {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px dotted black;
+  margin: 0 4px;
+}
+
+.plusminus-pos {
+  background-color: rgba(255, 99, 132, 0.2);
+}
+
+.plusminus-neg {
+  background-color: rgba(54, 162, 235, 0.2);
+}
+
+.plusminus-d {
+  background-color: rgba(255, 206, 86, 0.2);
+}
